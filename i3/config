@@ -237,7 +237,8 @@ bindsym $mod+e exec thunar
 # Start Picom
 exec picom &
 
-
+# Start Polybar
+exec /usr/local/bin/polybar
 
 
 
