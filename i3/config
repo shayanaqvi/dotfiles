@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Inter Bold 9
+font pango:SF Mono 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -60,6 +60,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+c exec rofi -show window
+bindsym $mod+x exec rofi -show run
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -226,15 +227,25 @@ bar {
 		}
 }
 
+# i3 Colors
+client.focused #fab387 #313244 #ffffff		
+client.focused_inactive #1e1e2e #1e1e2e #efefef
+client.unfocused #1e1e2e #1e1e2e #efefef
+#client.urgent
+#client.placeholder
+#client.background
+
 # i3-gaps
 for_window [class=".*"] border pixel 0
 gaps inner 10
+gaps outer 15
 
 # Set desktop wallpaper on startup
 exec --no-startup-id nitrogen --restore
 
 # Keybindings to open applications
 bindsym $mod+e exec caja
+bindsym $mod+Shift+m exec emacsclient -c -a 'emacs'
 
 # Start Picom
 exec picom &
@@ -242,5 +253,6 @@ exec picom &
 # Start Polybar
 exec /usr/local/bin/polybar
 
-
+# Start the emacs daemon
+bindsym $mod+Shift+e exec /usr/bin/emacs --daemon
 
