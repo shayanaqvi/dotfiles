@@ -1,3 +1,3 @@
 # dotfiles
 My dotfiles for i3, kitty, micro, picom, polybar and rofi.
-![desktop4](https://user-images.githubusercontent.com/93083490/179677506-dcb1bb68-f78b-4bcd-ad35-f6d6425dc831.png)
+![desktopV](https://user-images.githubusercontent.com/93083490/180430244-14171b8f-3443-4658-ada7-4762d1ba855a.png)
